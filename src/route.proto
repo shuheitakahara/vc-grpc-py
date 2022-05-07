@@ -1,19 +1,25 @@
 syntax = "proto3";
 
-message StreamingVCRequest {
-    StreamingVCConfig config = 1;
+/**
+* Streamingはデータを読み取れない（2022/5/7現在）
+* 参考
+* https://stackoverflow.com/questions/70433943/data-streaming-on-grpc-python-with-iterator-request-but-get-exception-iterating
+*/
+
+message VCRequest {
+    VCConfig config = 1;
     bytes audio_content = 2;
 }
 
-message StreamingVCConfig {
+message VCConfig {
     string api_key = 1;
 }
 
-message StreamingVCResponse {
+message VCResponse {
     bytes audio_content = 1;
     string timestamp = 2;
 }
 
 service VCGateway {
-    rpc StreamingVC(stream StreamingVCRequest) returns (stream StreamingVCResponse) {}
+    rpc VoiceChange(VCRequest) returns (VCResponse) {}
 }

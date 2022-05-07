@@ -14,44 +14,44 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fsrc/route.proto\"O\n\x12StreamingVCRequest\x12\"\n\x06\x63onfig\x18\x01 \x01(\x0b\x32\x12.StreamingVCConfig\x12\x15\n\raudio_content\x18\x02 \x01(\x0c\"$\n\x11StreamingVCConfig\x12\x0f\n\x07\x61pi_key\x18\x01 \x01(\t\"?\n\x13StreamingVCResponse\x12\x15\n\raudio_content\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\t2K\n\tVCGateway\x12>\n\x0bStreamingVC\x12\x13.StreamingVCRequest\x1a\x14.StreamingVCResponse\"\x00(\x01\x30\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fsrc/route.proto\"=\n\tVCRequest\x12\x19\n\x06\x63onfig\x18\x01 \x01(\x0b\x32\t.VCConfig\x12\x15\n\raudio_content\x18\x02 \x01(\x0c\"\x1b\n\x08VCConfig\x12\x0f\n\x07\x61pi_key\x18\x01 \x01(\t\"6\n\nVCResponse\x12\x15\n\raudio_content\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\t25\n\tVCGateway\x12(\n\x0bVoiceChange\x12\n.VCRequest\x1a\x0b.VCResponse\"\x00\x62\x06proto3')
 
 
 
-_STREAMINGVCREQUEST = DESCRIPTOR.message_types_by_name['StreamingVCRequest']
-_STREAMINGVCCONFIG = DESCRIPTOR.message_types_by_name['StreamingVCConfig']
-_STREAMINGVCRESPONSE = DESCRIPTOR.message_types_by_name['StreamingVCResponse']
-StreamingVCRequest = _reflection.GeneratedProtocolMessageType('StreamingVCRequest', (_message.Message,), {
-  'DESCRIPTOR' : _STREAMINGVCREQUEST,
+_VCREQUEST = DESCRIPTOR.message_types_by_name['VCRequest']
+_VCCONFIG = DESCRIPTOR.message_types_by_name['VCConfig']
+_VCRESPONSE = DESCRIPTOR.message_types_by_name['VCResponse']
+VCRequest = _reflection.GeneratedProtocolMessageType('VCRequest', (_message.Message,), {
+  'DESCRIPTOR' : _VCREQUEST,
   '__module__' : 'src.route_pb2'
-  # @@protoc_insertion_point(class_scope:StreamingVCRequest)
+  # @@protoc_insertion_point(class_scope:VCRequest)
   })
-_sym_db.RegisterMessage(StreamingVCRequest)
+_sym_db.RegisterMessage(VCRequest)
 
-StreamingVCConfig = _reflection.GeneratedProtocolMessageType('StreamingVCConfig', (_message.Message,), {
-  'DESCRIPTOR' : _STREAMINGVCCONFIG,
+VCConfig = _reflection.GeneratedProtocolMessageType('VCConfig', (_message.Message,), {
+  'DESCRIPTOR' : _VCCONFIG,
   '__module__' : 'src.route_pb2'
-  # @@protoc_insertion_point(class_scope:StreamingVCConfig)
+  # @@protoc_insertion_point(class_scope:VCConfig)
   })
-_sym_db.RegisterMessage(StreamingVCConfig)
+_sym_db.RegisterMessage(VCConfig)
 
-StreamingVCResponse = _reflection.GeneratedProtocolMessageType('StreamingVCResponse', (_message.Message,), {
-  'DESCRIPTOR' : _STREAMINGVCRESPONSE,
+VCResponse = _reflection.GeneratedProtocolMessageType('VCResponse', (_message.Message,), {
+  'DESCRIPTOR' : _VCRESPONSE,
   '__module__' : 'src.route_pb2'
-  # @@protoc_insertion_point(class_scope:StreamingVCResponse)
+  # @@protoc_insertion_point(class_scope:VCResponse)
   })
-_sym_db.RegisterMessage(StreamingVCResponse)
+_sym_db.RegisterMessage(VCResponse)
 
 _VCGATEWAY = DESCRIPTOR.services_by_name['VCGateway']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _STREAMINGVCREQUEST._serialized_start=19
-  _STREAMINGVCREQUEST._serialized_end=98
-  _STREAMINGVCCONFIG._serialized_start=100
-  _STREAMINGVCCONFIG._serialized_end=136
-  _STREAMINGVCRESPONSE._serialized_start=138
-  _STREAMINGVCRESPONSE._serialized_end=201
-  _VCGATEWAY._serialized_start=203
-  _VCGATEWAY._serialized_end=278
+  _VCREQUEST._serialized_start=19
+  _VCREQUEST._serialized_end=80
+  _VCCONFIG._serialized_start=82
+  _VCCONFIG._serialized_end=109
+  _VCRESPONSE._serialized_start=111
+  _VCRESPONSE._serialized_end=165
+  _VCGATEWAY._serialized_start=167
+  _VCGATEWAY._serialized_end=220
 # @@protoc_insertion_point(module_scope)

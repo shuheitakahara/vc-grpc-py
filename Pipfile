@@ -5,9 +5,16 @@ name = "pypi"
 
 [packages]
 grpcio-tools = "*"
+sounddevice = "*"
+librosa = "*"
 
 [dev-packages]
 autopep8 = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+compile = "python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. src/route.proto"
+client = "python src/client.py"
+server = "python src/server.py"
