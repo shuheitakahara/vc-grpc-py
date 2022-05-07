@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message StreamingVCRequest {
+    StreamingVCConfig config = 1;
+    bytes audio_content = 2;
+}
+
+message StreamingVCConfig {
+    string api_key = 1;
+}
+
+message StreamingVCResponse {
+    bytes audio_content = 1;
+    string timestamp = 2;
+}
+
+service VCGateway {
+    rpc StreamingVC(stream StreamingVCRequest) returns (stream StreamingVCResponse) {}
+}
